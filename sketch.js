@@ -16,7 +16,7 @@ function setup() {
 
 function draw() {
   
- translate(10,10)
+ translate(7,7)
    background(30)
 var myImage = capture.loadPixels();
 
@@ -25,16 +25,16 @@ var myImage = capture.loadPixels();
 noFill()
    var vol = mic.getLevel();
 
-  for(var x=0; x<680; x+=40){
-   for(var y = 0; y< 520; y+=40){
+  for(var x=-1; x<windowWidth; x+=windowWidth/12){
+   for(var y = 2; y< windowHeight; y+=windowHeight/12){
       
  noStroke()
-   var c = myImage.get(x+20, y+20);
+   var c = myImage.get(x+windowWidth/24, y+windowHeight/24);
    
   var value = brightness(c)
   
     fill(220)
-      rect(x,y,23+value/28,23+value/28)
+      rect(x,y,windowWidth/22+value/28,windowWidth/22+value/28)
       
    
 
