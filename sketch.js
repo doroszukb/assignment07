@@ -25,7 +25,7 @@ var myImage = capture.loadPixels();
 noFill()
    var vol = mic.getLevel();
 
-  for(var x=0; x<windowWidth; x+=windowWidth/12){
+  for(var x=-1; x<windowWidth; x+=windowWidth/12){
    for(var y = 2; y< windowHeight; y+=windowHeight/12){
       
  noStroke()
